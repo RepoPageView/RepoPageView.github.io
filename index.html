@@ -60,6 +60,38 @@
             color: white;
             text-decoration: none;
         }
+        .prod-card {
+            padding: 0 7vw;
+            height: auto; 
+            position: relative;
+            margin: 4em 0; 
+        }
+        .prod-card img {
+            width: 100%;
+            height: auto;
+            display: block;      /* removes extra space under image */
+            object-fit: cover;
+            border-radius: 20px; 
+            border: 1px solid #4D5958;
+        }
+        .prod-heading {
+            position: absolute;
+            top: 15px; 
+            left: calc(38px + 7vw);
+            color: #4D5958; 
+        }
+        .prod-heading h3 {
+            font-size: 5em; 
+            font-weight: lighter;
+            line-height: 1.25em; 
+            padding: 0; 
+            margin: 0; 
+        }
+        .prod-heading span {
+            font-size: 1.5em; 
+            font-weight: lighter;
+            line-height: 0; 
+        }
     </style>
 </head>
 <body>
@@ -81,7 +113,22 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+    <section>
+        <div class="prod-card">
+            <img src="imgs/nova-6-mobile.jpg" alt="Rokkor NOVA" /> 
+            <div class="prod-heading">
+                <h3>NOVA</h3>
+                <span>2 Seater</span>
+            </div>
+        </div>
+        <div class="prod-card">
+            <img src="imgs/lyra-6-mobile.jpg" alt="Rokkor Lyra" /> 
+            <div class="prod-heading">
+                <h3>LYRA</h3>
+                <span>2 Seater</span>
+            </div>
+        </div>
+    </section>
     <script>
         function toggleNav() {
             const nav = document.getElementById('mobileNav');
