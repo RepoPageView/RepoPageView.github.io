@@ -1,1 +1,92 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Site</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(235, 235, 235);
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 7vw;
+            background-color: rgb(235, 235, 235);
+            color: #4D5958;
+        }
+        .hamburger {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .bar {
+            width: 25px;
+            height: 1.5px;
+            margin: 7px 0; 
+            background-color: #4D5958;
+        }
+        .logo {
+            text-align: center;
+            padding-right: 4vw;
+            padding-top: 3px;
+            flex-grow: 1;
+
+        }
+        .logo img {
+            max-height: 40px;
+        }
+        nav {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            background-color: #444;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 10px 15px;
+            border-bottom: 1px solid #555;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>     
+        </div>
+        <div class="logo">
+            <img src="imgs/rokkor-logo.svg" alt="Logo">
+        </div>
+    </header>
+    <nav id="mobileNav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('mobileNav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
