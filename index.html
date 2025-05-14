@@ -10,130 +10,15 @@
             font-family: Arial, sans-serif;
             background-color: rgb(235, 235, 235);
         }
-        header {
-            display: flex;
-            align-items: center;
-            padding: 15px 7vw;
-            background-color: rgb(235, 235, 235);
-            color: #4D5958;
-        }
-        .hamburger {
-            font-size: 24px;
-            cursor: pointer;
-        }
-        .bar {
-            width: 25px;
-            height: 1.5px;
-            margin: 7px 0; 
-            background-color: #4D5958;
-        }
-        .logo {
-            text-align: center;
-            padding-right: 4vw;
-            padding-top: 3px;
-            flex-grow: 1;
-
-        }
-        .logo img {
-            max-height: 40px;
-        }
-        nav {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            width: 100%;
-            background-color: #444;
-            color: white;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            padding: 10px 15px;
-            border-bottom: 1px solid #555;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .prod-card {
-            padding: 0 7vw;
+        img {
+            width: 100%; 
             height: auto; 
-            position: relative;
-            margin: 4em 0; 
-        }
-        .prod-card img {
-            width: 100%;
-            height: auto;
-            display: block;      /* removes extra space under image */
-            object-fit: cover;
-            border-radius: 20px; 
-            border: 1px solid #4D5958;
-        }
-        .prod-heading {
-            position: absolute;
-            top: 15px; 
-            left: calc(38px + 7vw);
-            color: #4D5958; 
-        }
-        .prod-heading h3 {
-            font-size: 3em; 
-            font-weight: lighter;
-            line-height: 1.25em; 
-            padding: 0; 
             margin: 0; 
-        }
-        .prod-heading span {
-            font-size: 1em; 
-            font-weight: lighter;
-            line-height: 0; 
+            padding: 0; 
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="hamburger" onclick="toggleNav()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>     
-        </div>
-        <div class="logo">
-            <img src="imgs/rokkor-logo.svg" alt="Logo">
-        </div>
-    </header>
-    <nav id="mobileNav">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section>
-        <div class="prod-card">
-            <img src="imgs/nova-6-mobile.jpg" alt="Rokkor NOVA" /> 
-            <div class="prod-heading">
-                <h3>NOVA</h3>
-                <span>2 Seater</span>
-            </div>
-        </div>
-        <div class="prod-card">
-            <img src="imgs/lyra-6-mobile.jpg" alt="Rokkor Lyra" /> 
-            <div class="prod-heading">
-                <h3>LYRA</h3>
-                <span>2 Seater</span>
-            </div>
-        </div>
-    </section>
-    <script>
-        function toggleNav() {
-            const nav = document.getElementById('mobileNav');
-            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
+    <img src="imgs/mobile8.jpg" />
 </body>
 </html>
