@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Site</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: rgb(235, 235, 235);
-        }
-        img {
-            width: 100%; 
-            height: auto; 
-            margin: 0; 
-            padding: 0; 
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Swap</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .image-container {
+      width: 100%;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <img src="imgs/mobile8c.jpg" />
+
+<div class="image-container">
+  <img id="image1" src="imgs/head-open.jpg" />
+  <img id="image2" src="imgs/page.jpg" />
+</div>
+
+<script>
+  const img1 = document.getElementById('image1');
+  const img2 = document.getElementById('image2');
+
+  let toggled = false;
+
+  img1.addEventListener('click', () => {
+    if (!toggled) {
+      img1.src = 'imgs/head-close.jpg';
+      img2.src = 'imgs/nav.jpg';
+    } else {
+      img1.src = 'imgs/head-open.jpg';
+      img2.src = 'imgs/page.jpg';
+    }
+    toggled = !toggled;
+  });
+</script>
+
 </body>
 </html>
